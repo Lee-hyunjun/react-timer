@@ -1,0 +1,279 @@
+.signIn, .individual, .company {
+  padding: 50px;
+}
+
+.signIn {
+
+  .header {
+    color: #3b2790;
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 4rem;
+  }
+
+  .box {
+    width: 100%;
+
+    .input {
+      
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+
+      input {
+        height: 2rem !important;
+        padding: 17px 14px;
+
+        &::placeholder {
+          color: #7552fc;
+          opacity: 1;
+        }
+      }
+      
+      .MuiOutlinedInput-notchedOutline {
+        border: 1px solid #dad1ff;
+      }
+    }
+    
+    button {
+      margin-top: 1.5rem;
+      height: 7rem;
+      font-size: 2rem;
+    }
+  }
+
+  .MuiTypography-body1 {
+    font-size: 1.7rem;
+    color: #3b2790;
+  }
+
+  .util {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+
+    .remember {
+      padding-left: 4px;
+  
+      .PrivateSwitchBase-root-169 {
+        padding: 5px;
+      }
+      .MuiSvgIcon-root {
+        width: 2rem;
+        height: 2rem;
+  
+        path {
+          background: #e9e9e9;
+        }
+      }
+    }
+
+    .find {
+      font-size: 1.7rem;
+      color: #3b2790;
+
+      a:first-child {
+        display: inline-block;
+        position: relative;
+        padding-right: 1.3rem;
+        margin-right: 1.3rem;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 50%;
+          background: #3b2790;
+          position: absolute;
+          right: -1px;
+          top: 60%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+}
+
+.sns {
+  .title {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #494949;
+    position: relative;
+    margin-bottom: 3rem;
+    margin-top: 7rem;
+
+    &::after, &::before {
+      content: "";
+      display: block;
+      width: 36%;
+      height: 2px;
+      background: #a9a9a9;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 48%;
+
+      .iconBox {
+
+        img {
+          position: relative;
+          left: -.5rem;
+          top: .3rem;
+        }
+      }
+    }
+  }
+}
+
+.signInFooter {
+  background: #dbd8ee;
+  padding: 20px 50px;
+
+  .top {
+    border-bottom: 1px solid #bdbacd;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem !important;
+
+    align-items: flex-start !important;
+
+    span:nth-child(1) {
+      position: relative;
+      top: -.4rem;
+    }
+  }
+
+  .MuiTypography-body1 {
+    font-size: 1.6rem;
+    color: #3b2790;
+  }
+
+  .agree {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #3b2790;
+
+    > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  .add {
+    color: #3b2790;
+    
+    .MuiSvgIcon-root {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.individual, .company {
+
+  .sign-info {
+    text-align: center;
+    font-size: 1.7rem;
+    color: #494949;
+  }
+
+  .regBtn {
+    margin: 5.5rem 0 2rem 0;
+
+    button {
+      height: 7.5rem;
+      width: 100%;
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.signContent {
+  .tab {
+    display: flex;
+  
+    > div {
+      background: #dbd8ee;
+      color: #766bc1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      width: 50%;
+      padding: 2.4rem 0;
+      cursor: pointer;
+    }
+  
+    > div.active {
+      color: #3b2790;
+      background: #fff;
+    }
+  }
+
+  .individual, .company {
+    .form {
+      > div {
+        margin: .71rem 0;
+      }
+    }
+  }
+  
+  .company {
+    .MuiSelect-select.MuiSelect-select {
+      padding-left: 13px;
+      padding-right: 20px !important;
+      border: 1px solid #ababab;
+      padding-top: 23px;
+      padding-bottom: 23px;
+      border-radius: 6px;
+      font-size: 1.5rem;
+    }
+
+    .MuiInput-underline:before {
+      border-bottom: none !important;
+    }
+
+    .select {
+      svg {
+        right: 15px;
+        top: calc(50% - 7px);
+      }
+    }
+  }
+
+  .nextStep {
+    button {
+      height: 7.5rem;
+      font-size: 2rem;
+      display: flex;
+      justify-content: space-between;
+
+      .material-icons {
+        font-size: 3rem;
+      }
+    }
+  }
+}

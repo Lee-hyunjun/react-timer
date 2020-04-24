@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.btn{
+  width: 90px;
+  height: 38px;
+  border: 0px solid black;
+  font-size: 13px;
+  color: white;
+}
+.time__reset{
+  background: #fbad10;
+}
+.time__start{
+  background: #4aae71;
+}
+.time__rap{
+  background:#0090dd;
+}
+.time__stop{
+  background:#EF6262;
+}
+.timer__main{
+  display: flex;
+}
+.side__menu{
+  background: #3d3c3c;
+  width: 105px;
+}
+.main__content{
+  width: 100%;
+}
+.content{
+  width: 100%;
+  background: #f0f0f0;
+  padding: 35px;
+}
+.content__timer{
+  width: 100%;
+  height: 695px;
+  background: white;
+  position: relative;
+}
+.timer{
+  font-family: Digital-7;
+  font-size: 230px;
+  font-weight: bold;
+  color: #414141;
+  position: absolute;
+  left: 26%;
+  top: 34%;
+}
+.buttons{
+  position: absolute;
+  bottom: 25%;
+  left: 42.7%;
+}
+.buttons > button{
+  margin-right: 10px;
+}
+.buttons > button:hover{
+  cursor: pointer;
+}
+.timer__header{
+  width: 100%;
+  height: 80px;
+  background:#0090dd;
+}
+.timer__footer{
+  width: 100%;
+  height: 50px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timer__footer > p{
+  color:white;
+}
+.timer__rap{
+  margin-top: 30px;
+  width: 100%;
+  min-height: 300px;
+  background: white;
+  display: block;
+}
+.timer__ms{
+  font-size: 100px;
+}
+.timer__rap{
+  position: relative;
+}
+.rap__header{
+  position: absolute;
+  left: 37%;
+  top: 10%;
+  font-size: 35px;
+  display: flex;
+}
+.rap__header > th{
+  display: block;
+  font-weight: lighter;
+  margin-right: 115px;
+  color: #555;
+}

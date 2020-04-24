@@ -1,0 +1,102 @@
+$weekHeight: 33px;
+$weekMarginTop: $weekHeight / 1.5;
+$hoursMarginBottom: 16px;
+$gridLineHeight: $hoursMarginBottom + (($weekHeight + $weekMarginTop) * 7) - $weekMarginTop + $hoursMarginBottom;
+$scheduleHeight: 20px;
+
+.scheduler {
+  width: 100%;
+  color: #494949;
+
+  .view {
+    width: 100%;
+
+    .hours {
+      display: flex;
+      justify-content: space-between;
+      padding-left: rem(40px);
+      padding-right: rem(20px);
+      margin-bottom: $hoursMarginBottom;
+
+      .hour {
+        position: relative;
+        font-size: rem(14px);
+        font-family: "Avenir Next LT Pro Demi";
+        letter-spacing: rem(-1px);
+
+        &:before {
+          content: '';
+          width: 1px;
+          height: $gridLineHeight;
+          background: #e3e5e6;
+          position: absolute;
+          top: rem(14px);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &.active {
+          color: $primary;
+          &:before {
+            background: $primary;
+          }
+        }
+      }
+    }
+
+    .weeks {
+      .week {
+        position: relative;
+        width: 100%;
+        height: $weekHeight;
+        border-radius: $weekHeight / 2;
+        background: rgba(255,255,255,.8);
+
+        &+.week {
+          margin-top: $weekMarginTop;
+        }
+
+        &.active {
+          .label {
+            background: $primary;
+            color: white;
+          }
+        }
+
+        .label {
+          @include flexCenter;
+          background: #e2e6eb;
+          color: #494949;
+          width: $weekHeight;
+          height: $weekHeight;
+          font-size: rem(14px);
+          border-radius: $weekHeight / 2;
+          font-weight: 600;
+        }
+
+        .timebox {
+          width: 100%;
+          position: absolute;
+          transform: translateY(-50%);
+          left: 0;
+          top: 50%;
+        }
+
+        .schedule {
+          @include flexCenter;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 48px;
+          background: $primary;
+          color: white;
+          height: $scheduleHeight;
+          border-radius: $scheduleHeight / 2;
+          width: 100px;
+          font-size: rem(12px);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

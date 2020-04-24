@@ -1,0 +1,268 @@
+.mypage {
+  background: #f3f5f7;
+  width: 100%;
+  padding: rem(70px) 0;
+  margin-top: 80px;
+  min-height: calc(100vh - 8rem);
+  color: #494949;
+
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(50px);
+
+    .info {
+      margin-left: rem(40px);
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: rem(46px);
+        background: #d6dee0;
+        margin-left: rem(40px);
+      }
+
+      img {
+        width: rem(80px);
+        height: rem(80px);
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        margin-right: rem(20px);
+      }
+
+      .type {
+        display: block;
+        font-size: rem(14px);
+        color: #858d94;
+        white-space: nowrap;
+      }
+
+      .name {
+        display: block;
+        font-size: rem(22px);
+        color: $primary_darken;
+        white-space: nowrap;
+      }
+    }
+
+    .changeProfileImageButton {
+      min-width: auto;
+      padding: rem(12px) rem(16px);
+      margin-right: rem(12px);
+      margin-left: rem(12px);
+
+      .MuiIcon-root {
+        font-size: rem(32px);
+        color: #ced2d8;
+      }
+    }
+
+    .links {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: rem(8px);
+      border: 1px solid #d6dee0;
+      height: rem(80px);
+
+      span {
+        @include flexCenter;
+        width: 25%;
+        height: 100%;
+        font-size: rem(16px);
+        text-align: center;
+        cursor: pointer;
+        transition: .3s color;
+        color: #333f50;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      .divider {
+        width: 1px;
+        height: 26px;
+        background: #d6dee0;
+      }
+    }
+  }
+
+  .dashboard {
+    width: 100%;
+    display: flex;
+    border: 1px solid #dadde2;
+    border-radius: rem(10px);
+    background: white;
+    margin-bottom: rem(24px);
+
+    .item {
+      width: 25%;
+      padding: rem(24px) rem(32px);
+
+      & + .item {
+        border-left: 1px solid #ced2d8;
+      }
+
+      .label {
+        display: block;
+        font-size: rem(16px);
+        margin-bottom: rem(24px);
+      }
+
+      .value {
+        display: block;
+        font-size: rem(48px);
+        font-family: 'Avenir Next LT Pro Bold';
+        color: #494949;
+        text-align: right;
+      }
+    }
+  }
+
+  .listBox {
+    width: 100%;
+    border: 1px solid #dadde2;
+    border-radius: rem(10px);
+    background: white;
+
+    .category {
+      width: 100%;
+      border-bottom: 1px solid #dadde2;
+      padding: rem(16px) rem(24px);
+
+      span {
+        font-size: rem(18px);
+        margin-right: rem(50px);
+        color: #a9adb2;
+        cursor: pointer;
+
+        &.active {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .tableBox {
+    .badge {
+      display: inline-block;
+      width: auto;
+      padding: rem(2px) rem(20px);
+      font-size: rem(14px);
+      color: $secondary;
+      background: rgba($secondary, .15);
+      border: 1px solid $secondary;
+      font-weight: bold;
+
+      &.jobOffer {
+        color: $primary;
+        background: rgba($primary, .15);
+        border: 1px solid $primary;
+      }
+    }
+
+    .table {
+      margin-top: 0 !important;
+
+      .headerInfo {
+        display: none;
+      }
+
+      .header {
+        th {
+          border-top: none;
+          background: #fcfbfe;
+          border-bottom: 1px solid #e6e8eb;
+          color: #bcbdc4;
+          font-size: rem(14px);
+          height: rem(40px);
+          padding: 0;
+          font-weight: 400;
+        }
+      }
+
+      .item {
+        td {
+          font-size: rem(16px);
+          text-align: center;
+          color: #7c8387;
+          border-bottom: 1px solid #e6e8eb;
+          padding: rem(16px);
+        }
+
+        .deleteButton {
+          width: 36px;
+          height: 36px;
+          background: #e2e6eb;
+          box-shadow: none;
+          color: #7b7b7b;
+          min-width: initial;
+          padding: 0;
+          border-radius: 6px;
+
+          .MuiIcon-root {
+            font-size: rem(18px);
+          }
+        }
+
+        .pointBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Avenir Next LT Pro Demi';
+
+          .order {
+            @include flexCenter;
+            width: rem(27px);
+            height: rem(27px);
+            background: #ced6df;
+            color: white;
+            border: 1px solid #b9c0c8;
+            border-radius: rem(5px);
+            font-size: rem(14px);
+            margin-right: rem(8px);
+          }
+          
+          .point {
+            font-size: rem(14px);
+            color: #7c8289;
+          }
+        }
+
+        &:first-child {
+          .pointBox {
+            .order {
+              background: $primary;
+              border-color: $primary_darken;
+            }
+          }
+        }
+
+        .target {
+          display: flex;
+          align-items: center;
+          font-size: rem(14px);
+
+          img {
+            width: rem(40px);
+            height: rem(40px);
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            margin-right: rem(8px);
+          }
+        }
+      }
+
+      .pageBtn {
+        margin-bottom: rem(40px);
+      }
+    }
+  }
+}

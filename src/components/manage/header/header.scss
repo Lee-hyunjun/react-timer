@@ -1,0 +1,116 @@
+.manage {
+
+  > .header {
+    border-bottom: 1px solid #e7eaec;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+
+    .left {
+      align-items: center;
+      padding-left: 30px;
+  
+      img {
+        width: 160px;
+      }
+      .logoBox {
+        /* background: #1ab394;
+        color: #fff; */
+        padding: 15px 25px;
+        cursor: pointer;
+
+      }
+    }
+
+    .right {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .info {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        
+        .userInfo {
+          margin-left: 14px;
+          padding-left: 18px;
+          border-left: 1px solid rgba(0,0,0,.2);
+        }
+      }
+
+      .mainMenuList {
+        display: flex;
+        margin-left: 5px;
+        
+        > .item {
+          padding: 15px 7px 15px 16px;
+          position: relative;
+          cursor: pointer;
+          font-size: 14px;
+          color: #676a6c;
+          font-weight: 600;
+
+          &.active {
+            color: $primary;
+          }
+  
+          &:hover {
+            .subMenu {
+              display: block;
+              pointer-events: inherit;
+
+              .active {
+                color: $primary;
+              }
+            }
+          }
+    
+          .subMenu {
+            pointer-events: none;
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            background: white;
+            border: 1px solid #e7eaec;
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            z-index: 9999;
+            box-shadow: 0 3px 10px rgba(0,0,0,.2);
+    
+            a {
+              display: block;
+              padding: 10px 15px 10px 20px;
+              font-size: 13px;
+              color: #676A6C;
+              font-weight: 400;
+              letter-spacing: -.5px;
+
+              &:hover {
+                color: $secondary;
+              }
+            }
+          }
+        }
+      }
+
+      .logout {
+        height: 100%;
+        padding: 17px 40px;
+        margin-left: 20px;
+      }
+    }
+  }
+}

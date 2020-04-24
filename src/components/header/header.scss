@@ -1,0 +1,54 @@
+
+
+.userHeader {
+  background: rgba(255,255,255,.5);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  .rap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 8rem;
+  }
+
+  .logoBox {
+
+    img {
+      width: 21rem;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    a {
+      color: #3b2790;
+      font-family: 'NotoSansKR';
+      font-size: 1.6rem;
+      margin: 0 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  .profileBox {
+    cursor: pointer;
+
+    img {
+      width: 3rem;
+    }
+  }
+}
+
+.loginDialog {
+  .MuiDialog-paperScrollPaper {
+    max-width: 600px !important;
+    width: 100%;
+  }
+}

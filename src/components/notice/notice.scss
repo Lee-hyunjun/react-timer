@@ -1,0 +1,40 @@
+.noticeItem {
+  /* font-family: 'NotoSansKR'; */
+  padding: 12px 0;
+
+  .title {
+    font-size: 1.6rem;
+    color: #242f2e;
+    font-weight: 500;
+    /* font-family: 'NotoSansKR'; */
+  }
+
+  .content, .info {
+    color: #666666;
+    font-size: 1.9rem;
+  }
+
+  .info {
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 1px;
+
+    span {
+      position: relative;
+      margin-right: .5rem;
+      padding-right: .5rem;
+    }
+
+    span:not(:last-child)::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 60%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #aaaaaa;
+    }
+  }
+}

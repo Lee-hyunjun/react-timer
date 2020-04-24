@@ -1,0 +1,220 @@
+
+.userFooter {
+  background: #fdf8f4;
+  padding-top: 3rem;
+  
+  .topLinks {
+    background: #f2ede9;
+    text-align: center;
+    border: 1px solid #d7d3d0;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 0 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      font-family: 'NotoSansKR';
+
+      &:not(:last-child)::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 90%;
+        background: #beb2a9;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .contents {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'NotoSansKR';
+    padding: 3rem 0;
+    border-bottom: 1px solid #d7d3d0;
+    position: relative;
+    
+    img {
+      margin-right: 4rem;
+    }
+
+    .text {
+      /* padding-left: 4rem; */
+      color: #4b443f;
+      line-height: 1.76rem;
+
+      span {
+        position: relative;
+        padding-right: 1rem;
+        margin-right: 1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        &:not(:last-child)::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 1px;
+          height: 60%;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background: #beb2a9;
+        }
+      }
+    }
+
+    .topBtn {
+      background: #f8f3ef;
+      color: #000;
+      font-family: 'NotoSansKR';
+      font-weight: 700;
+      width: 7rem;
+      height: 7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #f0ebe7;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .btm {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+      margin: 0 4rem;
+    }
+  }
+}
+
+
+@media(max-width: 1199px) {
+  .userFooter .contents {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  .userFooter .btm {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .userFooter .btm img {
+    width: 33.333%;
+    margin: 0;
+    padding: 0 1rem;
+  }
+}
+
+@media(max-width: 850px) {
+  .boards .contents .board {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .noticeItem .title {
+    font-size: 1.9rem;
+  }
+  .boards .contents .board.simple {
+    padding: 2.9rem 0rem;
+  }
+
+  .boards.simple .board.simple .noticeItem.simple .date {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  .boards.simple .board.simple .noticeItem.simple .content .title {
+    font-size: 1.6rem;
+  }
+
+  .boards.simple .board.simple .noticeItem.simple {
+    padding: 4px 0;
+  }
+}
+
+@media(max-width: 550px) {
+  .userFooter {
+
+    .contents {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+
+      .logo {
+        width: 100%;
+        text-align: center;
+
+        img {
+          width: 20rem;
+        }
+      }
+
+      .text {
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+
+        span {
+          display: block;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          text-align: center;
+          padding-bottom: 2px;
+
+          &::after, &::before {
+            display: none !important;
+            border: none !important;
+          }
+        }
+      }
+
+      .topBtn {
+        position: fixed;
+        right: 10px;
+        bottom: calc(env(safe-area-inset-bottom) + 10px);
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+      }
+    }
+
+    .btm {
+      padding-right: 1rem;
+      padding-left: 1rem;
+
+      img {
+        width: 33.333%;
+        margin: 0;
+        padding: 0 1rem;
+      }
+    }
+
+    .topLinks a {
+      
+    }
+  }
+
+  .iphoneX {
+
+    .userFooter {
+      .btm {
+        padding-bottom: calc(env(safe-area-inset-bottom) + 5px) !important;
+      }
+    }
+  }
+}

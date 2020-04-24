@@ -1,0 +1,103 @@
+.communityDetailPage {
+  width: 100%;
+  padding: rem(70px) 0;
+  margin-top: 80px;
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    color: $primary_darken;
+    font-size: rem(18px);
+    margin-bottom: rem(40px);
+    cursor: pointer;
+
+    .MuiIcon-root {
+      color: #292929;
+      font-size: rem(24px);
+      margin-right: rem(16px);
+    }
+  }
+
+  .communityDetailHeader {
+    border-top: 1px solid #dbdbdd;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 {
+      font-size: rem(24px);
+      font-weight: 500;
+    }
+
+    .top {
+      border-bottom: 2px solid #929498;
+      padding: rem(24px) rem(10px);
+
+      .scrapButton {
+        background: #f6f9fb;
+        color: #292929;
+        border: 1px solid #dadde2;
+        border-radius: 4px;
+        padding: rem(6px) rem(10px);
+        min-width: auto;
+        font-size: rem(14px);
+        white-space: nowrap;
+        margin-left: 10%;
+
+        img {
+          width: 18px;
+          height: auto;
+          margin-right: rem(8px);
+        }
+      }
+    }
+
+    .bottom {
+      padding: rem(12px) rem(10px);
+      border-bottom: 1px solid #dbdbdd;
+      margin-bottom: rem(28px);
+
+      .infos {
+        display: flex;
+        align-items: center;
+
+        span {
+          display: flex;
+          align-items: center;
+          font-size: rem(14px);
+
+          & + span {
+            &::before {
+              content: '';
+              display: block;
+              width: 1px;
+              height: rem(7px);
+              background: rgba(0,0,0,.5);
+              margin: 0 rem(6px);
+            }
+          }
+        }
+      }
+
+      a {
+        font-size: rem(14px);
+        color: $primary;
+      }
+    }
+  }
+
+  .contents {
+    img {
+      width: 100%;
+      margin-bottom: rem(24px);
+    }
+    
+    p {
+      margin-bottom: rem(24px);
+      font-size: rem(16px);
+      font-weight: 500;
+    }
+  }
+}

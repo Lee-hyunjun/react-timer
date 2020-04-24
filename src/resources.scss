@@ -1,0 +1,24 @@
+$baseFontSize: 10px;
+$desktopRapMaxWidth: 1200px;
+$primary: #7552fc;
+$secondary: #5289fe;
+$error: #f44336;
+$primary_darken: darken($primary, 30);
+
+
+@function rem($px) {
+  @return #{$px / $baseFontSize}rem;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin positionCenter($position: absolute) {
+  position: $position;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}

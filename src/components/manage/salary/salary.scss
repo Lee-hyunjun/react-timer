@@ -1,0 +1,164 @@
+.salarystatement {
+  
+  .contentBox {
+    display: flex;
+    
+    .form {
+      padding-top: 0;
+
+      .title {
+        display: none;
+      }
+    }
+
+    .table {
+      margin: 0;
+      max-width: 700px;
+    }
+
+    .formBox {
+      padding-top: 50px;
+      border-left: 1px solid rgba(0,0,0,.1);
+      padding-left: 60px;
+      margin-left: 60px;
+
+      & > .header {
+        background: #f2f3f5;
+        padding: 20px;
+        border: 1px solid rgba(0,0,0,.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .field {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+
+      .item {
+      }
+  
+      .item:nth-child(1) {
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+    }
+
+
+    .header2 {
+      display: flex;
+      border: 1px solid rgba(0,0,0,.07);
+      border-bottom: none;
+      
+      > div {
+        width: 50%;
+        text-align: center;
+        background: #f2f3f5;
+        padding: 20px 0;
+
+        &:nth-child(2) {
+          border-left: 1px solid rgba(0,0,0,.07);
+        }
+      }
+    }
+  }
+
+  .formFooter {
+    > div {
+      width: 100%;
+    }
+    
+    .top {
+      display: flex;
+      border-top: 2px solid #000;
+      margin-top: -2px;
+      
+      > div {
+        width: 50%;
+        padding: 20px 20px 20px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &:nth-child(1) {
+          border-right: 1px solid rgba(0,0,0,.1);
+        }
+
+        h2 {
+          font-size: 15px;
+          color: #333;
+        }
+      }
+    }
+
+    .btm {
+      border-bottom: 2px solid #000;
+      
+
+      h2 {
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid rgba(0,0,0,.1);
+        font-size: 20px;
+        background: #f2f3f5;
+      }
+    }
+  }
+
+  .footer {
+
+    .info p {
+      color: $primary;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 4px;
+        font-size: 15px;
+      }
+    }
+
+    .totalInfo {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,.1);
+      
+      h2 {
+        font-size: 20px;
+        color: #444;
+        padding-bottom: 20px;
+      }
+
+      .list {
+        display: flex;
+
+        .item {
+          margin-right: 20px;
+          border-radius: 4px;
+          padding: 15px 15px;
+          display: flex;
+          justify-content: space-between;
+          font-size: 18px;
+          cursor: pointer;
+
+          &:nth-child(1) {
+            background: #f2f3f5;
+          }
+
+          &:nth-child(2) {
+            background: #f2f3f5;
+          }
+
+          &:nth-child(3) {
+            background: #f2f3f5;
+          }
+
+          &:nth-child(4) {
+          }
+        }
+      }
+    }
+  }
+}

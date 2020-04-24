@@ -1,0 +1,229 @@
+.job {
+  background: #f3f5f7;
+  position: relative;
+  padding-bottom: 10rem;
+
+  .userHeader {
+    position: relative;
+  }
+
+  > .content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    > h1.title {
+      font-size: 3.2rem;
+      color: #3b2790;
+      padding-bottom: 5rem;
+      padding-top: 7rem;
+    }
+  }
+
+  .tab {
+    display: flex;
+    
+    > div {
+      width: 16rem;
+      height: 6rem;
+      background: #e3ecff;
+      color: #8190af;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      padding: 2.4rem 0;
+      cursor: pointer;
+      border-top: 1px solid #dadde2;
+      border-bottom: 1px solid #dadde2;
+      border-right: 1px solid #dadde2;
+
+      &:nth-child(1) {
+        border-left: 1px solid #dadde2;
+      }
+    }
+  
+    > div.active {
+      color: #3b2790;
+      background: #fff;
+      border-bottom: none;
+    }
+  }
+
+  .searchBox {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+    .placeBox {
+      background: white;
+      border: 1px solid #dadde2;
+      border-top: none;
+      width: 100%;
+      border-right: none;
+    }
+
+    .search, .addNotice {
+      button {
+        width: 12.8rem;
+        height: 12.9rem;
+        background: #7552fc;
+        box-shadow: none;
+      }
+    }
+
+    .addNotice {
+      position: absolute;
+      right: 0;
+      transform: translateX(110%);
+      background: white;
+      cursor: pointer;
+      
+      button {
+        border: 1px solid #dadde2;
+        color: #4e4565;
+        background: #fff !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1.8rem;
+
+        img {
+          display: block;
+          margin-bottom: 1.2rem;
+        }
+      }
+    }
+
+
+    .selectBox {
+      display: flex;
+      padding: 0 4.3rem;
+      justify-content: space-between;
+
+      > div {
+        justify-content: center;
+        position: relative;
+
+        &:not(:last-child)::after {
+          content: '';
+          display: none;
+        }
+      }
+
+      .MuiInput-root .MuiSelect-select {
+        padding: 0;
+        font-size: 2rem;
+        font-family: 'NotoSansKR';
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        width: 45.5rem;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        color: #333f50;
+        background: #fafafa;
+        padding-left: 2.4rem;
+      }
+      
+      .MuiInput-underline:before,
+      .MuiInput-underline:after {
+        border-bottom: none;
+        display: none;
+      }
+
+      .MuiInput-underline:after {
+        background: #e0e0e0;
+      }
+
+      svg {
+        right: 2rem;
+        top: calc(50% - 8px);
+      }
+    }
+  }
+
+  .table {
+
+    .writer {
+      text-align: left;
+
+      .label {
+        padding: .3rem 1rem;
+        font-size: 1.4rem;
+        display: inline-block;
+        font-weight: 600;
+        
+        &.type1 {
+          border: 1px solid #7552fc;
+          color: #7552fc;
+        }
+
+        &.type2 {
+          border: 1px solid #ffb80e;
+          color: #ffb80e;
+        }
+        
+        &.type2 {
+          border: 1px solid #1fba44;
+          color: #1fba44;
+        }
+      }
+
+      > div {
+        font-size: 2rem;
+        color: #494949;
+        margin-top: .8rem;
+      }
+    }
+
+    .item {
+      .content {
+        text-align: left;
+
+        p {
+          display: flex;
+          font-size: 1.6rem;
+          color: #797979;
+        }
+
+        div {
+          font-size: 2rem;
+          color: #292929;
+        }
+      }
+    }
+
+    .endDate {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #292929;
+      text-align: center;
+    }
+
+    .daysInfo {
+      margin-top: 0;
+
+      .days {
+        align-items: center;
+        
+        > div {
+          width: 3rem;
+          height: 3rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .tommo {
+    color: #7552fc;
+  }
+
+  .today {
+    color: #ff2d68;
+  }
+}

@@ -1,0 +1,21 @@
+
+
+.CDialog {
+  & .MuiPaper-rounded {
+    position: relative;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  & .close-button {
+    position: absolute;
+    top: -23px;
+    right: -23px;
+    width: 46px;
+    height: 46px;
+    background: #2e2e2e;
+    border: none;
+    color: #fff;
+    font-size: 0;
+  }
+}

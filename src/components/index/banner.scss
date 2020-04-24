@@ -1,0 +1,225 @@
+.indexBanner {
+  position: relative;
+  overflow-x: hidden;
+  
+
+  .bgBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    text-align: center;
+    width: 1870px;
+    max-width: 1868.5px;
+    overflow-x: hidden;
+    padding: 0 1.5px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      margin-top: 8rem;
+    }
+  }
+
+  .searchBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .left {
+      display: flex;
+      height: 9rem;
+      width: 46.3%;
+
+      .imgBox {
+        background: url('../../assets/images/searchBoxLeft.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 72%;
+        z-index: 99;
+
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: url('../../assets/images/lineLayer.png') no-repeat center;
+          z-index: 999;
+        }
+      }
+
+      .txt {
+        background: rgba(225,234,229, .8); 
+        height: 100%;
+        max-width: 156px;
+        width: 156px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.3rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
+    }
+
+    .right {
+      display: flex;
+      width: 644px;
+
+      .selectBox {
+        background: rgba(255,255,255,.9);
+        height: 100%;
+        display: flex;
+        position: relative;
+        z-index: 99;
+  
+        > div { 
+          margin-right: 19px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+  
+          &:not(:last-child)::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 20px;
+            background: #e0e0e0;
+            position: absolute;
+            left: inherit;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+  
+        .MuiInput-root .MuiSelect-select {
+          padding: 0;
+          padding-left: 35px;
+          padding-right: 80px !important;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          font-size: 1.4rem;
+          font-family: 'NotoSansKR';
+          font-weight: 600;
+        }
+        
+        .MuiInput-underline:before,
+        .MuiInput-underline:after {
+          border-bottom: none;
+          display: none;
+        }
+  
+        .MuiInput-underline:after {
+          background: #e0e0e0;
+        }
+      }
+
+      .searchBtn {
+
+        .btn {
+          margin-left: 0;
+          height: 100%;
+          width: 9rem;
+          height: 9rem;
+
+          img {
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.MuiListItem-root, .MuiListItem-root.Mui-selected:hover {
+  font-size: 1.6rem !important;
+  font-family: 'NotoSansKR';
+}
+
+@media(max-width: 1199px) {
+  .indexBanner {
+    .content {
+      img {
+        padding-left: .7rem;
+      }
+    }
+    .searchBox {
+      .left {
+        display: none;
+      }
+      .right {
+        width: 100%;
+        .selectBox {
+          width: calc(100% - 9rem);
+
+          > div {
+            width: 33.333%;
+          }
+
+          .MuiInput-root .MuiSelect-select {
+            padding-right: 20px !important;
+            padding-left: 20px !important;
+          }
+
+          .MuiSelect-icon {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .rap {
+    
+  }
+}
+
+@media(max-width: 520px) {
+  .indexBanner {
+    .searchBox {
+      .right {
+        .selectBox {
+          width: calc(100% - 7rem);
+
+          .MuiInput-root .MuiSelect-select {
+            /* font-size: 1.2rem; */
+            padding-right: 15px !important;
+            padding-left: 20px !important;
+          }
+        }
+        .searchBtn {
+          .btn {
+            min-width: 7rem;
+            width: 7rem !important;
+            height: 7rem;
+            padding: 0;
+            img {
+              width: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.Clist {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  & .highlight {
+    color: $primary;
+  }
+
+  & .line {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  & .line span {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  & .line span + span:before {
+    display: inline-block;
+    width: 1px;
+    height: 1rem;
+    margin: 0 .5rem;
+    font-size: 0;
+    background: #ccc;
+    content: '';
+  }
+}

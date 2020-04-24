@@ -1,0 +1,31 @@
+.sendNoteDialog {
+  text-align: center;
+
+  .MuiDialog-paper {
+    padding: rem(32px);
+  }
+
+  h1 {
+    font-size: rem(22px);
+    color: darken($primary, 30);
+    font-weight: 400;
+    margin-top: rem(32px);
+    margin-bottom: rem(32px);
+  }
+
+  .MuiFormControl-root {
+    margin-bottom: rem(18px);
+  }
+
+  .MuiButtonBase-root.btn {
+    font-size: rem(18px);
+    padding: rem(24px) rem(40px);
+  }
+
+  .helperText {
+    color: darken($primary, 30);
+    font-size: rem(15px);
+    margin-top: rem(24px);
+    text-align: left;
+  }
+}

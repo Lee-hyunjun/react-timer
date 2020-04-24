@@ -1,0 +1,140 @@
+.table {
+  margin-top: 9rem;
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+
+    tr {
+      width: 100%;
+    }
+  }
+
+  .headerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      color: #494949;
+      font-size: 2rem;
+      padding: 2rem;
+      
+      span {
+        color: #7552fc;
+      }
+    }
+
+    .MuiInput-root .MuiSelect-select {
+      padding: 0;
+      font-size: 1.6rem;
+      font-family: 'NotoSansKR';
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      color: #333f50;
+      padding-left: 2.4rem;
+      width: 9rem;
+    }
+    
+    .MuiInput-underline:before,
+    .MuiInput-underline:after {
+      border-bottom: none;
+      display: none;
+    }
+
+    .MuiInput-underline:after {
+      background: #e0e0e0;
+    }
+
+    svg {
+      right: 0;
+      top: calc(50% - 8px);
+    }
+  }
+
+  .header {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #292929;
+    background: #fff;
+    
+    th {
+      padding: 1.5rem 0;
+      border-top: 1px solid #c5c7cc;
+      border-bottom: 1px solid #dadde2;
+    }
+  }
+
+  .content {
+    
+    .item {
+      td {
+        padding: 2.5rem 0;
+        border-bottom: 1px solid #dadde2;
+
+        &:first-child {
+          padding-left: 3rem;
+        }
+      }
+
+      > div {
+        text-align: center;
+        font-size: 1.6rem;
+      }
+
+      .daysInfo {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .fn {
+      display: flex;
+      justify-content: center;
+
+      button {
+        font-size: 1.4rem;
+        color: #292929;
+        border: 1px solid #dadde2;
+        border-radius: 6px;
+        background: white;
+        display: flex;
+        align-items: center;
+        margin: 0.3rem;
+
+        img {
+          margin-right: .4rem;
+        }
+      }
+    }
+  }
+
+  .pageBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    
+
+    button {
+      width: 4.8rem;
+      height: 4.8rem;
+      border: 1px solid #c5c7cc;
+      border-left: none;
+      background: #fff;
+      border-radius: 0;
+      padding: 0;
+      min-width: 0;
+
+      &.active {
+        background: #e8e9eb;
+      }
+    }
+
+    div:nth-child(1) button {
+      border-left: 1px solid #c5c7cc;
+    }
+  }
+}

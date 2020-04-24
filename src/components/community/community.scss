@@ -1,0 +1,199 @@
+.communityPage {
+  width: 100%;
+  padding: rem(70px) 0;
+  margin-top: 80px;
+  border-top: 1px solid #dadde2;
+
+  h1 {
+    font-weight: 500;
+    font-size: rem(26px);
+    color: $primary_darken;
+    margin-bottom: rem(40px);
+
+    .subtitle {
+      font-size: rem(20px);
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: rem(26px);
+        margin: 0 rem(16px);
+        background: $primary;
+      }
+    }
+  }
+}
+
+.communityListTab {
+  .tabs {
+    display: flex;
+    border-left: none;
+    border-bottom: 1px solid #dadde2;
+
+    .tab {
+      @include flexCenter;
+      position: relative;
+      width: rem(160px);
+      height: rem(60px);
+      background: #e3ecff;
+      border: 1px solid #dadde2;
+      border-bottom: none;
+      color: #8190af;
+      font-size: rem(18px);
+      cursor: pointer;
+
+      &:not(:first-child) {
+        border-left: none;
+      }
+
+      &.active {
+        color: $primary_darken;
+        background: white;
+
+        &:before {
+          content: '';
+          width: 100%;
+          height: 1px;
+          left: 0;
+          bottom: -1px;
+          position: absolute;
+          background: white;
+        }
+      }
+    }
+  }
+
+  .tabPanel {
+    width: 100%;
+    min-height: rem(300px);
+    background: white;
+    border: 1
+  }
+}
+
+.communityListContainer {
+  .listHeader {
+    padding: rem(20px) rem(40px);
+    font-size: rem(16px);
+    font-weight: 500;
+    color: #494949;
+    font-family: 'Avenir Next LT Pro Demi';
+    border-bottom: 1px solid #c5c7cc;
+  }
+}
+
+.noticeList {
+  .item {
+    display: flex;
+    align-items: center;
+    padding: rem(32px) rem(11px) rem(32px) rem(22px);
+
+    & + .item {
+      border-top: 1px solid #c5c7cc;
+    }
+
+    & > img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+      object-position: center;
+      margin-right: rem(20px);
+      cursor: pointer;
+    }
+
+    .texts {
+      cursor: pointer;
+
+      .title {
+        font-size: rem(16px);
+        font-weight: 500;
+        margin-bottom: rem(8px);
+      }
+
+      p {
+        font-size: rem(14px);
+        color: #777777;
+        margin-bottom: rem(8px);
+      }
+
+      .infos {
+        display: flex;
+        align-items: center;
+
+        span {
+          display: flex;
+          align-items: center;
+          font-size: rem(14px);
+
+          & + span {
+            &::before {
+              content: '';
+              display: block;
+              width: 1px;
+              height: rem(7px);
+              background: rgba(0,0,0,.5);
+              margin: 0 rem(6px);
+            }
+          }
+        }
+      }
+    }
+
+    .scrapButton {
+      background: #f6f9fb;
+      color: #292929;
+      border: 1px solid #dadde2;
+      border-radius: 4px;
+      padding: rem(6px) rem(10px);
+      min-width: auto;
+      font-size: rem(14px);
+      white-space: nowrap;
+      margin-left: 10%;
+
+      img {
+        width: 18px;
+        height: auto;
+        margin-right: rem(8px);
+      }
+    }
+  }
+}
+
+.newsList,
+.filesList {
+  .table {
+    margin-top: 0 !important;
+
+    .headerInfo {
+      display: none;
+    }
+
+    table {
+      th {
+        border-top: none;
+        padding: rem(12px) 0;
+        background: #f9fafb;
+        font-size: rem(14px);
+        font-weight: 400;
+      }
+
+      tbody {
+        tr {
+          transition: .3s background;
+          
+          &:hover {
+            background: rgba(0,0,0,.05);
+          }
+        }
+      }
+
+      td {
+        padding: rem(12px) rem(24px) !important;
+        text-align: center;
+        font-size: rem(14px);
+        cursor: pointer;
+      }
+    }
+  }
+}

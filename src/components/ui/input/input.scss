@@ -1,0 +1,81 @@
+.ui_input {
+  font-size: rem(16px);
+
+  .MuiIcon-root {
+    font-size: rem(24px);
+  }
+
+  .MuiButton-root {
+    font-size: rem(14px);
+    box-shadow: none;
+  }
+
+  .MuiFormLabel-root {
+    font-size: rem(16px);
+  }
+
+  legend {
+    font-size: rem(12px) !important;
+  }
+  
+  &.shadow {
+    .MuiInputBase-root {
+      background: white;
+      border-radius: rem(8px);
+      box-shadow: 0 rem(4px) rem(8px) rgba(0, 0, 0, .3);
+
+      &.MuiOutlinedInput-adornedStart {
+        padding-left: rem(20px);
+
+        .MuiOutlinedInput-input {
+          padding-left: rem(12px);
+        }
+      }
+
+      &.MuiOutlinedInput-adornedEnd {
+        padding-right: rem(20px);
+
+        .MuiOutlinedInput-input {
+          padding-right: rem(12px);
+        }
+      }
+
+      .MuiInputBase-input {
+        padding: rem(24px);
+      }
+
+      .MuiOutlinedInput-notchedOutline {
+        border: none;
+      }
+    }
+  }
+
+  &.filled {
+    .MuiOutlinedInput-notchedOutline {
+      border-color: lighten($primary, 20) !important;
+    }
+    
+    .MuiInputBase-root {
+      /* background: lighten($primary, 30); */
+      background: #f5f2ff;
+      
+      &.MuiInputBase-colorSecondary {
+        /* background: lighten($secondary, 30); */
+      }
+    }
+  }
+
+  .MuiInputBase-root {
+    font-size: inherit;
+
+    &.Mui-focused {
+      color: inherit;
+    }
+
+    &.MuiInputBase-colorSecondary {
+      &.Mui-focused {
+        color: $secondary;
+      }
+    }
+  }
+}

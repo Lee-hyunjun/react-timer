@@ -1,0 +1,122 @@
+.jobRegisterForm {
+  background: #f3f5f7;
+  width: 100%;
+  padding: rem(70px) 0;
+  margin-top: 80px;
+
+  .MuiOutlinedInput-input {
+    /* padding: 15.5px 14px; */
+  }
+
+  .MuiOutlinedInput-input {
+    height: .85em;
+  }
+
+  .MuiInputLabel-outlined {
+    transform: translate(14px, 17px) scale(1);
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: rem(26px);
+    color: $primary_darken;
+    margin-bottom: rem(40px);
+  }
+
+  section {
+    background: white;
+    border: 1px solid #dadde2;
+    padding: rem(40px);
+
+    h2 {
+      font-weight: 400;
+      font-size: rem(22px);
+      color: $primary_darken;
+      margin-bottom: rem(32px);
+    }
+
+    & + section {
+      margin-top: rem(24px);
+    }
+  }
+
+  .writerInfoForm {
+    .ui_input {
+      margin-bottom: rem(18px);
+    }
+  
+    .helperText {
+      font-size: rem(16px);
+      display: flex;
+      align-items: center;
+    }
+  }
+
+
+  .addButton {
+    font-size: rem(18px);
+    box-shadow: none;
+    padding: rem(14px);
+    margin-bottom: rem(24px);
+
+    .MuiIcon-root {
+      font-size: rem(24px);
+    }
+  }
+
+  .gridForm {
+    margin-top: rem(24px);
+
+    .formLabel {
+      color: #494949;
+      font-size: rem(20px);
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .marginDivider {
+      width: 100%;
+      margin-bottom: rem(24px);
+    }
+
+    .ageRangeGrid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .ui_checkbox {
+        margin-right: rem(40px);
+      }
+
+      .ageRange {
+        display: flex;
+        align-items: center;
+        transition: .3s opacity;
+
+        &.disabled {
+          opacity: .5;
+        }
+        
+        & > span {
+          margin: 0 rem(12px);
+          font-size: rem(24px);
+        }
+
+        .ui_input {
+          /* width: 30%; */
+          width: rem(170px);
+        }
+      }
+    }
+  }
+
+  .registerButtonBox {
+    margin-top: rem(14px);
+
+    .btn {
+      padding: rem(20px);
+      font-size: rem(22px);
+    }
+  }
+}

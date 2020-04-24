@@ -1,0 +1,120 @@
+$sidebarPadding: 2rem;
+
+#simple-menu {
+  .MuiMenuItem-root {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: rem(20px);
+      height: rem(20px);
+      margin-right: rem(8px);
+      fill: red;
+    }
+  }
+}
+
+.map-sidebar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 100vh;
+  background: #fff;
+  font-family: 'NotoSansKR';
+
+  box-shadow: 0 0 5px lightgray;
+
+  & .header {
+    background: $primary;
+    padding: $sidebarPadding;
+
+    & .nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    & .nav img {
+      width: 12rem;
+    }
+
+    & .more {
+      background: none;
+      border: none;
+      color: #fff;
+    }
+
+    & .search {
+      margin: 1rem 0;
+  
+      & .keyword-input .MuiInputBase-root .MuiInputBase-input {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+  
+      & .info {
+        margin-top: 1.5rem;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  & .tab {
+    padding: 0 $sidebarPadding;
+    background: $primary;
+    color: #fff;
+
+    & .MuiTab-root {
+      flex: 1;
+      min-width: auto;
+    }
+
+    & .MuiTab-textColorInherit {
+      opacity: 1;
+    }
+
+    & .Mui-selected {
+      background: #fff;
+      color: $primary;
+    }
+
+    & .MuiTabs-indicator {
+      background: #fff;
+    }
+  }
+
+  & .body {
+    display: flex;
+    flex-direction: column;
+    padding: $sidebarPadding;
+    height: 100%;
+    overflow: auto;
+
+    & .result-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: $sidebarPadding;
+
+      & .result {
+        font-size: 1.6rem;
+      }
+
+      & .highlight {
+        color: $primary;
+      }
+
+      & .sort {
+        font-size: 1.2rem;
+        color: #666;
+      }
+    }
+
+
+  }
+}

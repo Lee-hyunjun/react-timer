@@ -1,0 +1,327 @@
+.messageDetailPage {
+  background: #f3f5f7;
+  width: 100%;
+  padding: rem(70px) 0;
+  margin-top: 80px;
+  min-height: calc(100vh - 8rem);
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    color: $primary_darken;
+    font-size: rem(18px);
+    margin-bottom: rem(40px);
+    cursor: pointer;
+
+    .MuiIcon-root {
+      color: #292929;
+      font-size: rem(24px);
+      margin-right: rem(16px);
+    }
+  }
+}
+
+.messageDetailCard {
+  width: 100%;
+  background: white;
+  border: 1px solid #dadde2;
+  padding: rem(50px);
+
+  .subtitle {
+    font-size: rem(16px);
+  }
+
+  .badge {
+    display: inline-block;
+    width: auto;
+    padding: rem(2px) rem(20px);
+    font-size: rem(14px);
+    color: $secondary;
+    background: rgba($secondary, .15);
+    border: 1px solid $secondary;
+    font-weight: bold;
+    margin-bottom: rem(16px);
+    margin-right: rem(12px);
+
+    &.jobOffer {
+      color: $primary;
+      background: rgba($primary, .15);
+      border: 1px solid $primary;
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #dadde2;
+    padding-bottom: rem(16px);
+    margin-bottom: rem(10px);
+
+    h2 {
+      font-size: rem(24px);
+      font-weight: 400;
+    }
+
+    span {
+      font-size: rem(14px);
+    }
+  }
+
+  .infos {
+    display: table;
+    margin-bottom: rem(24px);
+
+    .item {
+      display: table-row;
+
+      & > div {
+        display: table-cell;
+        font-size: rem(16px);
+        padding: rem(10px) 0;
+
+        &:first-child {
+          padding-right: rem(32px);
+          color: #696969;
+        }
+      }
+    }
+
+    .schedule {
+      display: flex;
+      align-items: center;
+
+      & > span {
+        margin-right: rem(4px);
+      }
+    }
+  }
+
+  .viewScheduleButton {
+    min-width: auto;
+    padding: rem(1px) rem(12px);
+    border-radius: 0;
+    border: 1px solid $secondary;
+    background: rgba($secondary, .15);
+    color: $secondary;
+    margin-left: rem(8px);
+  }
+}
+
+.messageDetailCard_scheduleDialog {
+  .scheduleList {
+    .item {
+      border-radius: 0;
+      padding: rem(40px) rem(40px);
+
+      .actions {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.messageDetailTableTab {
+  .tabs {
+    display: flex;
+
+    .tab {
+      @include flexCenter;
+      position: relative;
+      width: rem(270px);
+      height: rem(60px);
+      background: #eceef0;
+      border: 1px solid #dadde2;
+      border-bottom: none;
+      color: #696969;
+      font-size: rem(18px);
+      cursor: pointer;
+
+      &:not(:first-child) {
+        border-left: none;
+      }
+
+      &.active {
+        color: #494949;
+        background: #f9fafb;
+
+        &:before {
+          content: '';
+          width: 100%;
+          height: 1px;
+          left: 0;
+          bottom: -1px;
+          position: absolute;
+          background: #f9fafb;
+        }
+      }
+    }
+  }
+
+  .tabPanel {
+    width: 100%;
+    min-height: rem(300px);
+    background: #f9fafb;
+    border: 1px solid #dadde2;
+  }
+}
+
+.messageDetailTable {
+  font-size: rem(16px);
+  padding: rem(32px);
+
+  .badge {
+    padding: rem(2px) 0;
+    width: rem(70px);
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .answerButton {
+    border-radius: 0;
+    font-size: rem(14px);
+    background: #646b75;
+    border: 1px solid #54585d;
+    color: white;
+    min-width: auto;
+    padding: rem(2px) rem(16px);
+    background-image: linear-gradient(to bottom, #6d757f, #535961);
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background: #858f9b;
+      z-index: 0;
+    }
+  }
+
+  .center {
+    @include flexCenter;
+    width: 100%;
+  }
+
+  .date {
+    padding: 0 rem(24px);
+    font-family: 'Avenir Next LT Pro Regular';
+  }
+
+  .table {
+    margin-top: 0;
+
+    .headerInfo {
+      display: none;
+    }
+
+    table {
+      border: none;
+    }
+
+    .header {
+      background: none;
+      
+      th {
+        border-top: none;
+        border-bottom: 1px solid #adafb3;
+        font-weight: 500;
+        font-size: rem(16px);
+      }
+    }
+
+    .content {
+      .item {
+        td {
+          padding: rem(18px) 0;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+.messageDetailDialog {
+  .content {
+    padding-top: rem(50px);
+    padding: rem(30px);
+
+    .infos {
+      font-size: rem(16px);
+      margin-bottom: rem(16px);
+      line-height: rem(32px);
+    }
+
+    .messageBox {
+      width: 100%;
+      height: rem(500px);
+      overflow: auto;
+      background: #f3f5f7;
+      border: 1px solid #dadde2;
+      margin-bottom: rem(24px);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+
+      .MuiButton-root {
+        padding: rem(2px) rem(16px);
+        font-size: rem(14px);
+        border-radius: 0;
+      }
+
+      .left {
+        display: flex;
+
+        button {
+          border: 1px solid #dadde2;
+          color: #9babbb;
+          margin-right: rem(7px);
+
+          .MuiIcon-root {
+            font-size: rem(18px);
+          }
+        }
+      }
+
+      .right {
+        .deleteButton {
+          border: 1px solid #dadde2;
+          color: #9babbb;
+          background: #f3f5f7;
+          margin-right: rem(7px);
+        }
+      }
+  
+      .answerButton {
+        border-radius: 0;
+        font-size: rem(14px);
+        background: #646b75;
+        border: 1px solid #54585d;
+        color: white;
+        min-width: auto;
+        padding: rem(2px) rem(16px);
+        background-image: linear-gradient(to bottom, #6d757f, #535961);
+        position: relative;
+  
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 1px;
+          background: #858f9b;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

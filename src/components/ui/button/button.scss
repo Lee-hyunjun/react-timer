@@ -1,0 +1,58 @@
+.MuiButtonBase-root.btn {
+  box-shadow: 0 1rem 2em rgba(111,92,253,.5);
+  font-family: 'NotoSansKR';
+  font-weight: 400;
+  color: white;
+  border-radius: 0;
+  font-size: 1.5rem;
+  padding: 1rem 4rem;
+  
+
+  &.black {
+    background: #494949 !important;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    .iconBox {
+      border-right: 1px solid #3a3a3a;
+      position: relative;
+      padding-right: 2rem;
+      margin-right: 2rem;
+      text-align: center;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: #5a5a5a;
+        top: 0;
+        right: -2px;
+      }
+    }
+  }
+
+  &.gray {
+    background: #ababab;
+    color: white;
+    box-shadow: none;
+  }
+
+  &.gradient {
+    box-shadow: none;
+  }
+
+  &.light {
+    background: #7552fc;
+    box-shadow: none;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+
+    .iconBox {
+      margin-right: .5rem;
+    }
+  }
+}

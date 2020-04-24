@@ -1,0 +1,52 @@
+.scheduleList {
+  .item {
+    padding: rem(32px) rem(40px);
+    background: #f3f5f7;
+    color: #494949;
+    border-radius: 10px;
+    border: 1px solid #ababab;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: rem(50px);
+
+      .title {
+        font-size: rem(18px);
+      }
+
+      .date {
+        background: #e2e6eb;
+        font-size: rem(18px);
+        padding: rem(10px) rem(32px);
+        border-radius: 50px;
+        font-family: 'Avenir Next LT Pro Demi';
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+
+        .MuiButton-root {
+          width: 36px;
+          height: 36px;
+          background: #e2e6eb;
+          box-shadow: none;
+          color: #7b7b7b;
+          min-width: initial;
+          padding: 0;
+          border-radius: 6px;
+
+          .MuiIcon-root {
+            font-size: rem(18px);
+          }
+
+          & + .MuiButton-root {
+            margin-left: rem(12px);
+          }
+        }
+      }
+    }
+  }
+}
